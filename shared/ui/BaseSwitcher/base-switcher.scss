@@ -1,0 +1,98 @@
+@use '@/app/assets/scss/utils' as *;
+
+.switcher {
+  user-select: none;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  background-color: $color-surface-primary;
+  outline: 0.0625rem solid $color-border-primary;
+  border-radius: 1.875rem;
+  width: 3.4375rem;
+  height: 2rem;
+  transition:
+    background-color $transition-hover,
+    outline $transition-hover,
+    opacity $transition-hover;
+  &:hover {
+    outline-color: $color-border-accent;
+    .switcher__cross-btn {
+      color: $color-border-invert;
+    }
+  }
+  &.disabled {
+    cursor: auto;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  &.active.disabled {
+    opacity: 0.3;
+  }
+  &:hover::after {
+    background-color: $color-accent-primary;
+  }
+  &.active {
+    background-color: $color-accent-primary;
+    outline-color: $color-accent-primary;
+    &:hover {
+      opacity: 0.7;
+    }
+    .switcher__cross-btn {
+      opacity: 0;
+      left: 1.625rem;
+    }
+    .switcher__checkmark-btn {
+      opacity: 1;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: $color-surface-highlight;
+    border: 0.0625rem solid $color-border-primary;
+    border-radius: 50%;
+    top: 0.125rem;
+    left: 0.0625rem;
+    transition:
+      left $transition-hover,
+      background-color $transition-hover,
+      border $transition-hover;
+  }
+  &.active::after {
+    left: 1.625rem;
+    background-color: $color-surface-primary;
+    border-color: $color-surface-primary;
+  }
+
+  &__cross-btn {
+    color: $color-border-icons;
+    position: relative;
+    left: 0.0625rem;
+    opacity: 1;
+    transition:
+      opacity $transition-hover,
+      left $transition-hover,
+      color $transition-hover;
+  }
+
+  &__checkmark-btn {
+    color: $color-border-accent;
+    position: relative;
+    right: 0.0625rem;
+    opacity: 0;
+    transition:
+      opacity $transition-hover,
+      color $transition-hover;
+  }
+  &__cross-btn,
+  &__checkmark-btn {
+    flex: 0 0 50%;
+    height: 100%;
+    object-fit: cover;
+    padding: 8px;
+    z-index: 2;
+  }
+}

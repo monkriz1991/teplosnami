@@ -1,0 +1,103 @@
+@use "@/app/assets/scss/utils" as *;
+
+.work-stages {
+  &__headline {
+    margin: 0rem 0 2rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 0 auto;
+  }
+  &__title {
+    font-weight: 900;
+    margin: 0 0 1rem;
+    font-size: 1.33rem;
+  }
+  &__text {
+    font-weight: 500;
+    margin: 0 0 1rem;
+    font-size: 1rem;
+  }
+  &__item {
+    position: relative;
+    padding: 3.5rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition:
+      background 0.3s,
+      color 0.3s;
+
+    &::before {
+      content: attr(data-step);
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 6rem;
+      font-weight: 800;
+      color: #000;
+      opacity: 0.05;
+      line-height: 1;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .work-stages__body {
+      position: relative;
+      z-index: 1;
+    }
+
+    &.is-dark {
+      background: #0b0f19;
+      color: #ffffff;
+
+      &::before {
+        color: #ffffff;
+        opacity: 0.13;
+      }
+
+      .work-stages__title {
+        color: #ffffff;
+      }
+
+      .work-stages__text {
+        color: #d6d6d6;
+      }
+
+      .work-stages__btn {
+        background-color: #007d0b;
+        color: #ffffff;
+        margin: 3rem 0 0 0;
+
+        &:hover {
+          background-color: #01a70f;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .work-stages__headline {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  .work-stages__item {
+    flex-direction: column;
+    padding: 2.5rem;
+  }
+
+  .work-stages__badge {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .work-stages__body {
+    text-align: left;
+  }
+}

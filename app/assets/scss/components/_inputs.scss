@@ -1,0 +1,143 @@
+@use '../utils' as *;
+
+label {
+  user-select: none;
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: border-color $transition-hover;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  @include flex(row, center, center);
+  padding: 0.5625rem;
+  border: 0.0625rem solid $color-border-primary;
+  border-radius: 0.25rem;
+  background-color: $color-surface-primary;
+
+  &:not(:disabled):checked {
+    background-color: $color-button;
+    background-image: url(@/app/assets/images/icons/checkbox.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+  }
+
+  &:not(:checked):not(:disabled):hover {
+    border: 0.0625rem solid $color-border-accent;
+  }
+}
+
+input[type='radio'] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0.0625rem solid $color-border-primary;
+  padding: 0.5625rem;
+  position: relative;
+  border-radius: 50%;
+  transition: border-color $transition-hover;
+
+  &:not(:checked):not(:disabled):hover {
+    border: 0.0625rem solid $color-border-accent;
+  }
+
+  &:not(:disabled):checked {
+    display: inline-block;
+    background-clip: content-box;
+    border: 0.3125rem solid $color-button;
+    background-color: $color-surface-primary;
+    border-radius: 50%;
+    padding: 0.3125rem;
+  }
+}
+
+input[type='number'] {
+  box-shadow: 0 0 0 0.0625rem $color-border-primary;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  min-height: 2.25rem;
+  color: $color-text-primary;
+  padding: 0.5rem 0.75rem;
+  transition: box-shadow $transition-hover;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::placeholder {
+    color: $color-text-secondary;
+  }
+
+  &.small {
+    width: 3.75rem;
+  }
+
+  &.medium {
+    width: 6.125rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 0.0625rem $color-border-accent;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.125rem $color-border-accent;
+  }
+
+  &:disabled {
+    box-shadow: 0 0 0 0.0625rem $color-border-primary;
+    background-color: $color-surface-highlight;
+  }
+}
+
+input[type='email'],
+input[type='password'],
+input[type='text'],
+input[type='date'],
+textarea {
+  cursor: text;
+  box-shadow: 0 0 0 0.0625rem $color-border-primary;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  min-height: 2.5rem;
+  color: $color-text-primary;
+  padding: 0.625rem 0.75rem;
+  transition: box-shadow $transition-hover;
+
+  &::placeholder {
+    color: $color-text-secondary;
+  }
+
+  &.small {
+    width: 3.75rem;
+  }
+
+  &.medium {
+    width: 6.125rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 0.0625rem $color-border-accent;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.125rem $color-border-accent;
+  }
+
+  &:disabled {
+    box-shadow: 0 0 0 0.0625rem $color-border-primary;
+    background-color: $color-surface-highlight;
+  }
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+}

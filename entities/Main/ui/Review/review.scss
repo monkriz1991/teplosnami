@@ -1,0 +1,115 @@
+@use "@/app/assets/scss/utils" as *;
+
+.reviews {
+  padding: 3rem 0;
+
+  &__headline {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    padding: 0rem;
+    border-radius: 16px;
+    height: 100%;
+    max-width: 500px;
+    -moz-column-gap: 1.5rem;
+    column-gap: 1.5rem;
+  }
+
+  &__photo {
+    width: 200px;
+    height: 220px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    // color: #800000;
+    width: 32px;
+    height: 32px;
+
+    &::after {
+      font-size: 24px;
+    }
+  }
+  .swiper {
+    position: relative !important;
+    padding-bottom: 2.55rem !important;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    cursor: pointer;
+    position: absolute;
+    z-index: 22;
+    bottom: 0rem;
+  }
+  .swiper-button-prev {
+    left: 0px;
+  }
+
+  .swiper-button-next {
+    right: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    padding: 0rem 0;
+    .swiper {
+      padding-bottom: 0.55rem !important;
+    }
+  }
+  .reviews__headline {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .reviews__card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .reviews__photo {
+    width: 60%;
+    height: 210px;
+    margin-bottom: 1rem;
+  }
+
+  .reviews__content {
+    gap: 0.75rem;
+  }
+}

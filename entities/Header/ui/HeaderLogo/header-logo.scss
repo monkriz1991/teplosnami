@@ -1,0 +1,46 @@
+@use "@/app/assets/scss/utils" as *;
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+
+  &-image {
+    height: 3rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+  }
+
+  &-title {
+    @include font(1.25rem, 700, 120%);
+    text-transform: uppercase;
+    color: $color-text-primary;
+  }
+
+  &-subtitle {
+    @include font(0.675rem, 400, 130%);
+    color: $color-text-secondary;
+  }
+}
+
+@media screen and (max-width: $mobile-md) {
+  .header__logo {
+    &-title {
+      @include font(1.15rem, 700, 120%);
+      text-transform: uppercase;
+    }
+
+    &-subtitle {
+      @include font(0.475rem, 400, 130%);
+    }
+  }
+}

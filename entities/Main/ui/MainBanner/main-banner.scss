@@ -1,0 +1,132 @@
+@use "@/app/assets/scss/utils" as *;
+
+.main-banner {
+  // background: url("/baner.png") center / cover no-repeat;
+  padding: 10rem 6rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  margin: 2rem 0;
+  border-radius: 2rem;
+  // overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    background-color: #0b0f19;
+    z-index: 0;
+    border-radius: 2rem;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    // max-width: 1150px;
+    // margin: 0 auto;
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+    align-content: flex-start;
+    text-align: left;
+    border-radius: 2rem;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: white;
+    // text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #e0e0e0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    max-width: 500px;
+    color: color-mix(in oklab, oklch(0.87 0.01 0) 80%, transparent);
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  &__search {
+    width: 100%;
+    max-width: 800px;
+  }
+  &__img {
+    position: absolute;
+    width: 33%;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    border-radius: 2rem;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+  &__btn {
+    background-color: #007d0b;
+    color: #ffffff;
+    margin: 1rem 0 0 0;
+
+    &:hover {
+      background-color: #01a70f;
+    }
+  }
+}
+
+// Анимация
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-banner {
+    padding: 3rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    &::before {
+      content: "";
+      border-radius: 1.3rem;
+    }
+    &__title {
+      font-size: 1.6rem;
+      font-weight: 900;
+    }
+
+    &__subtitle {
+      font-size: 0.98rem;
+      line-height: 1.4;
+      max-width: 500px;
+    }
+    &__img {
+      width: 55%;
+      opacity: 0.15;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@use "@/app/assets/scss/utils" as *;
+
+.region-block {
+  padding: 3rem 0;
+  background-color: #f8f8f8;
+  // text-align: center;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  &__desc {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    // margin-inline: auto;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+
+  &__item {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  }
+
+  &__pin {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #800000;
+    margin-right: 0.5rem;
+  }
+
+  &__note {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      // justify-content: center;
+    }
+  }
+
+  &__phone {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+
+    span {
+      font-weight: 700;
+      color: #800000;
+      white-space: nowrap;
+    }
+
+    &:hover span {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .region-block {
+    padding: 1rem 0 2rem;
+    &__title {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    &__actions {
+      align-items: inherit;
+    }
+    &__phone span {
+      margin: 0.5rem 0 0 0;
+      display: block;
+    }
+  }
+}

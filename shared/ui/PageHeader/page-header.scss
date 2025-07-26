@@ -1,0 +1,24 @@
+@use '@/app/assets/scss/utils' as *;
+
+.page-header {
+  background-color: $color-surface-highlight;
+  border-top: 0.0625rem solid $color-border-secondary;
+  border-bottom: 0.0625rem solid $color-border-secondary;
+
+  &__container {
+    min-height: 6.4375rem;
+    @include flex(row, flex-start, center);
+  }
+
+  &__heading {
+    color: $color-text-primary;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .page-header {
+    &__heading {
+      @include font(1.5rem, 600, 133%);
+    }
+  }
+}

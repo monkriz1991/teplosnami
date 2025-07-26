@@ -1,0 +1,73 @@
+@use "@/app/assets/scss/utils" as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1005;
+  overflow: auto;
+  // @include size(100%);
+  // @include flex(column, center, center);
+  background-color: rgba(0, 0, 0, 0.5);
+  .hero-form__row-title-with-span {
+    font-size: 0.925rem;
+    color: #333;
+    text-align: left;
+  }
+  .hero-form__input-text {
+    max-width: 100%;
+  }
+  .hero-form__row {
+    grid-template-columns: auto;
+  }
+  .hero-form__textarea {
+    min-height: 100px;
+  }
+  &__dialog {
+    margin: 50px auto 50px;
+    background-color: #fff;
+    z-index: 12;
+    max-width: 600px;
+    padding: 3rem;
+    border-radius: 1.2rem;
+    position: relative;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__dialog-cross-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  .button {
+    width: max-content;
+    margin-left: auto;
+  }
+}
+
+.hero-form__error {
+  color: red;
+  font-size: 0.675rem;
+  margin-top: 0.25rem;
+  position: absolute;
+  bottom: -16px;
+}
+
+@media screen and (max-width: $desktop-sm) {
+}
+
+@media screen and (max-width: $desktop-sm-card) {
+  .modal {
+    &__dialog {
+      margin: 1rem;
+      padding: 1rem;
+    }
+    &__dialog-cross-btn {
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+}

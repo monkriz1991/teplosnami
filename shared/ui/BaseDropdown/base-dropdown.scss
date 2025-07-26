@@ -1,0 +1,121 @@
+@use "@/app/assets/scss/utils" as *;
+
+.dropdown {
+  width: 7.75rem;
+  position: relative;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.wide {
+    width: 100%;
+    max-width: 21.25rem;
+  }
+
+  &.narrow {
+    width: 6.125rem;
+  }
+
+  &__text {
+    @include font(0.775rem, 400, 142%);
+  }
+
+  &__btn {
+    @include flex(row, space-between, center);
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 0.0625rem $color-border-primary;
+    color: $color-text-secondary;
+    transition: box-shadow $transition-hover;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 0 0.0625rem $color-border-accent;
+    }
+
+    &.active {
+      box-shadow: 0 0 0 0.125rem $color-border-accent;
+    }
+
+    &[disabled],
+    &:disabled {
+      cursor: auto;
+      pointer-events: none;
+      box-shadow: 0 0 0 0.0625rem $color-border-primary;
+      background-color: $color-surface-highlight;
+    }
+
+    &:disabled &__chevron {
+      color: $color-border-primary;
+    }
+  }
+
+  &__chevron {
+    color: $color-border-icons;
+    transition: transform $transition-hover ease-in;
+
+    &.active {
+      transform: rotateZ(-180deg);
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    background-color: $color-surface-primary;
+    outline: 0.0625rem solid $color-border-primary;
+    border-radius: 0.25rem;
+    overflow-y: auto;
+    z-index: 3;
+    max-height: 13.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: #f3f3f3 transparent;
+
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-clip: border-box;
+      height: 32px;
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+      transition: opacity 0.5s;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    width: 100%;
+    background-color: $color-surface-secondary;
+    padding: 0.625rem 0.75rem;
+
+    &:hover {
+      background-color: $color-surface-primary;
+    }
+    &--parent {
+      background-color: $color-surface-primary;
+      .button__text {
+        font-weight: 600;
+      }
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &--child {
+      padding: 0.625rem 0.75rem 0.625rem 1.75rem;
+    }
+  }
+  & .input-search {
+    width: calc(100% - 10px);
+    margin: 5px;
+  }
+}

@@ -1,0 +1,385 @@
+@use "@/app/assets/scss/utils" as *;
+
+.header {
+  width: 100%;
+  // position: relative;
+  background-color: var(--color-surface-primary);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 22;
+
+  &__container {
+    @include flex(row, space-between, center);
+    max-width: 84rem;
+    margin: 0 auto;
+    min-height: 4.625rem;
+    position: relative;
+    @include padding-horizontal(1.5rem);
+  }
+
+  &__content {
+    width: 100%;
+    @include flex(row, space-between, center);
+    gap: 2rem;
+
+    &.active {
+      z-index: 9999;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 20rem;
+    z-index: 101;
+    color: $color-button;
+  }
+
+  &__body {
+    @include flex(row, space-between, center);
+    gap: 1rem;
+  }
+
+  &__body-nav {
+    margin-left: auto;
+    @include flex(row, flex-end, center);
+    gap: 0.5rem;
+  }
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-text-primary;
+    @include font(1rem, 500, 140%);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition:
+      background-color $transition-hover,
+      color $transition-hover;
+
+    &:hover {
+      background-color: $color-surface-brand;
+      color: $color-accent-primary;
+    }
+
+    &.active {
+      background-color: $color-surface-highlight;
+      color: $color-accent-primary;
+    }
+  }
+  &__buttons {
+    display: none;
+  }
+
+  &__navmenu {
+    position: relative;
+  }
+}
+
+.navmenu-header {
+  &__list {
+    @include flex(row, space-between, center);
+    @include font(1rem, 600, 137%);
+    gap: 0.5rem;
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+
+    transition:
+      background-color $transition-hover,
+      color $transition-hover;
+    border-radius: 0.375rem;
+
+    & a {
+      padding: 0.75rem 1rem;
+      width: 100%;
+      max-width: none;
+    }
+
+    &:hover,
+    &:focus,
+    &.selected {
+      background-color: $color-surface-brand;
+    }
+
+    &.active {
+      background-color: $color-surface-highlight;
+    }
+  }
+
+  &__link {
+    display: block;
+    max-width: min-content;
+    position: relative;
+    white-space: nowrap;
+  }
+}
+
+.burger-header {
+  @include flex(column, center, center);
+  display: none;
+  gap: 0.25rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  z-index: 101;
+  transition: background-color 1s;
+  background-color: $color-surface-primary;
+  &.active {
+    background-color: transparent;
+    transition: background-color 0.1s;
+  }
+  &:hover {
+    .burger-header__stripe {
+      background-color: $color-accent-primary !important;
+    }
+  }
+  &:disabled {
+    .burger-header__stripe {
+      background-color: $color-border-icons !important;
+    }
+  }
+}
+
+.burger-header__stripe_1,
+.burger-header__stripe_2,
+.burger-header__stripe_3 {
+  transition: all 0.3s;
+}
+
+.burger-header.active .burger-header__stripe_1 {
+  transform: translateY(0.1875rem) rotate(45deg);
+}
+
+.burger-header.active .burger-header__stripe_2 {
+  display: none;
+  opacity: 0;
+}
+
+.burger-header.active .burger-header__stripe_3 {
+  transform: translateY(-0.175rem) rotate(-45deg);
+}
+
+.burger-header__stripe {
+  background-color: $color-accent-primary !important;
+  width: 1.125rem;
+  height: 0.125rem;
+  border-radius: 0.625rem;
+}
+@media screen and (max-width: $desktop-sm) {
+  .header {
+    z-index: 333;
+
+    &.active {
+      z-index: 102;
+    }
+
+    &-overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      @include size(100%);
+      z-index: 101;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__container {
+      @include padding-horizontal(1.25rem);
+    }
+  }
+
+  .header__content {
+    gap: 1.6875rem;
+  }
+
+  .header__navmenu {
+    width: 100%;
+  }
+
+  .navmenu-header__list {
+    flex-direction: column;
+    gap: 0.5rem;
+    @include font(1.5rem, 600, 136%);
+    font-family: "Manrope", sans-serif;
+    color: $color-text-primary;
+  }
+
+  .burger-header {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .header__body {
+    @include flex(column, center, center);
+    background-color: $color-surface-primary;
+    position: absolute;
+    transition:
+      top 0.5s ease,
+      visibility 0s 0.5s,
+      opacity 0s 0.2s ease-in;
+    z-index: 1000;
+    top: -120vh;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem;
+    gap: 0rem;
+    visibility: hidden;
+    opacity: 0;
+    border-top: 0.0625rem solid $color-border-primary;
+  }
+  .header__body.active {
+    top: 4.625rem;
+    transition:
+      top 0.6s ease-out,
+      visibility 0s,
+      opacity 0s ease-in;
+    visibility: visible;
+    opacity: 1;
+  }
+  .header__navmenu {
+    margin-bottom: 0rem;
+  }
+  .header__buttons {
+    @include flex(row, flex-start, center);
+    margin-left: auto;
+    gap: 0.75rem;
+  }
+  .header__buttons-burger {
+    display: none;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .navmenu-header {
+    &__list {
+      align-items: stretch;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  header {
+    &__container {
+      @include padding-horizontal(1rem);
+    }
+  }
+  .header__content {
+    gap: 0.875rem;
+  }
+  .header__buttons {
+    & .header__btn-register,
+    .header__theme-switch {
+      display: none;
+    }
+  }
+  .header__buttons-burger {
+    @include flex(column, center, center);
+    gap: 1.5rem;
+  }
+  .header__body {
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: $mobile-md) {
+  .header {
+    &.active {
+      z-index: 102;
+    }
+    &__content {
+      width: 100%;
+      @include flex(row, space-between, center);
+      gap: 2rem;
+
+      &.active {
+        z-index: initial;
+      }
+    }
+  }
+
+  .header__content {
+    gap: 0.5rem;
+  }
+  .header__buttons {
+    & .header__login-btns {
+      display: none;
+    }
+  }
+  .navmenu-header__list {
+    @include font(1.25rem, 700, 136%);
+    gap: 0;
+  }
+  .header__body {
+    padding: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .header__buttons-burger {
+    & .header__btn-login {
+      display: flex;
+    }
+  }
+}
+.header__contacts {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 14px;
+
+  &-info p a {
+    color: #e20000;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-socials {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    a svg {
+      color: #e20000;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  // Показывать только на desktop
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // На мобилке — в другом месте
+  &.header__contacts_mobile {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    font-size: 17px;
+  }
+}
+.header__link.active {
+  font-weight: 600;
+  position: relative;
+  background-color: var(--color-surface-brand);
+  color: var(--color-accent-primary);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-color);
+  }
+}

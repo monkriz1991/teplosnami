@@ -1,0 +1,295 @@
+@use "../utils" as *;
+
+.button {
+  @include flex(row, center, center);
+  @include font(1rem, 600, 137%);
+  text-align: center;
+  padding: 0.25rem 1.25rem;
+  min-height: 2.875rem;
+  border-radius: 0.5rem;
+  transition: all $transition-hover;
+  cursor: pointer;
+}
+
+.button_primary {
+  background-color: $color-button;
+  color: $color-text-invert;
+
+  &:not(:disabled):hover {
+    box-shadow: $hover-light-mode;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: auto;
+    pointer-events: none;
+    background-color: $color-surface-highlight;
+    color: $color-text-primary;
+  }
+}
+
+.button_save {
+  background-color: $color-button-save;
+  color: $color-text-invert;
+
+  &:not(:disabled):hover {
+    box-shadow: $hover-save-mode;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: auto;
+    pointer-events: none;
+    background-color: $color-surface-highlight;
+    color: $color-text-primary;
+  }
+}
+
+.button_delete {
+  background-color: $color-button-delete;
+  color: $color-text-invert;
+
+  &:not(:disabled):hover {
+    box-shadow: $hover-delete-mode;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: auto;
+    pointer-events: none;
+    background-color: $color-surface-highlight;
+    color: $color-text-primary;
+  }
+}
+
+.button_cancel {
+  background-color: $color-surface-highlight;
+  color: $color-button;
+  transition: box-shadow $transition-hover;
+
+  &:not(:disabled):hover {
+    box-shadow: $hover-cancel-mode;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: auto;
+    pointer-events: none;
+    background-color: $color-surface-highlight;
+    color: $color-text-primary;
+  }
+}
+
+.button_secondary {
+  background-color: $color-surface-highlight;
+  color: $color-button;
+  transition: box-shadow $transition-hover;
+
+  &:hover {
+    box-shadow: 0 0 0 0.0625rem $color-border-accent;
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: auto;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.button_small {
+  min-height: 2.1875rem;
+  @include font(0.875rem, 600, 136%);
+}
+
+.button_outlined {
+  color: $color-button;
+  box-shadow: 0 0 0 0.0625rem $color-border-accent;
+  transition: box-shadow $transition-hover;
+
+  &:hover {
+    box-shadow: 0 0 0 0.125rem $color-border-accent;
+  }
+}
+
+.button_outlined-icon {
+  color: $color-button;
+  padding: 0.75rem;
+  box-shadow: 0 0 0 0.0625rem $color-border-accent;
+  gap: 8px;
+  transition:
+    background-color $transition-hover,
+    box-shadow $transition-hover;
+
+  &:hover {
+    background-color: $color-surface-primary;
+    box-shadow: 0 0 0 0.125rem $color-border-accent;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: $color-surface-highlight;
+    box-shadow: none;
+  }
+}
+
+.button_icon-primary {
+  // cross in popup-menus
+  cursor: pointer;
+  transition: color $transition-hover;
+  color: $color-surface-invert;
+
+  &:hover {
+    color: $color-button;
+  }
+
+  &[disabled],
+  &:disabled {
+    color: $color-border-icons;
+  }
+}
+
+.button_icon-secondary {
+  cursor: pointer;
+  transition: color $transition-hover;
+  color: $color-border-icons;
+
+  &:hover {
+    color: $color-surface-invert;
+  }
+
+  &[disabled],
+  &:disabled {
+    color: $color-border-icons;
+  }
+}
+
+.button_with-icon {
+  // text with icon
+  @include flex(row, center, center);
+  gap: 0.5rem;
+  color: $color-text-primary;
+  // background-color: $color-surface-highlight;
+  padding: 0rem 1rem;
+
+  &:hover {
+    background-color: $color-surface-primary;
+  }
+}
+
+.button_with-icon-backgrounded {
+  @include flex(row, center, center);
+  gap: 0.5rem;
+  color: $color-text-primary;
+  background-color: $color-surface-highlight;
+  padding: 0rem 1rem;
+
+  &:hover {
+    background-color: $color-surface-secondary;
+  }
+}
+
+.button_with-icon-secondary {
+  @include flex(row, center, center);
+  gap: 0.5rem;
+  color: $color-text-primary;
+  padding: 0rem 1rem;
+
+  &:hover {
+    background-color: $color-surface-primary;
+  }
+
+  &.active {
+    background-color: $color-surface-primary;
+  }
+
+  &.small {
+    color: $color-accent-primary;
+  }
+}
+
+.button_with-indicator {
+  position: relative;
+
+  &.selected::after {
+    content: "";
+    position: absolute;
+    top: 0.3125rem;
+    right: 0.375rem;
+    @include size(0.9375rem);
+    @include font(0.6875rem, 600, 136%);
+    color: $color-button;
+    background-color: $color-accent-primary;
+    border-radius: 50%;
+    z-index: 2;
+  }
+}
+
+.text-button {
+  @include font(1rem, 600, 137%);
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0;
+  min-height: auto;
+  color: $color-accent-primary;
+  opacity: 1;
+  transition: opacity $transition-hover;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.filled-round-button {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-slider-round-button;
+  border-radius: 50%;
+  transition: background-color $transition-hover;
+
+  &:hover {
+    background-color: $color-surface-primary;
+  }
+}
+
+.filled-round-button_arrow {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-surface-primary;
+  border-radius: 50%;
+  transition: background-color $transition-hover;
+
+  &:hover {
+    background-color: $color-surface-primary;
+  }
+}
+
+.icon-button-colored {
+  cursor: pointer;
+  @include flex(row, center, center);
+  @include size(2rem);
+  padding: 0.5rem;
+  border: 0.0625rem solid $color-border-secondary;
+  border-radius: 50%;
+  color: $color-accent-primary;
+  transition:
+    color $transition-hover,
+    background-color $transition-hover;
+  &:hover {
+    background-color: $color-surface-highlight;
+  }
+
+  &.disabled,
+  &:disabled {
+    pointer-events: none;
+    cursor: auto;
+    background-color: $color-surface-highlight;
+    color: $color-text-secondary;
+  }
+}

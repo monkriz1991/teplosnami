@@ -1,0 +1,87 @@
+@use '../utils' as *;
+
+.heading {
+  color: $color-text-primary;
+}
+
+.heading_h1 {
+  @include font(2.5rem, 700, 137%);
+  font-family: 'Manrope', sans-serif;
+}
+
+.heading_h2 {
+  @include font(1.5rem, 600, 136%);
+  font-family: 'Manrope', sans-serif;
+}
+
+.heading_h3 {
+  @include font(1.25rem, 700, 136%);
+  font-family: 'Manrope', sans-serif;
+}
+
+.heading_h4 {
+  @include font(1.125rem, 600, 144%);
+  font-family: 'Manrope', sans-serif;
+}
+
+.heading_h5 {
+  @include font(1rem, 600, 144%);
+  font-family: 'Manrope', sans-serif;
+}
+
+.heading_h6 {
+  @include font(0.875rem, 700, 143%);
+  font-family: 'Manrope', sans-serif;
+}
+
+.body-text_1 {
+  @include font(1rem, 400, 144%);
+  font-family: 'Inter';
+}
+
+.body-text_2 {
+  @include font(0.875rem, 400, 143%);
+  font-family: 'Manrope', sans-serif;
+}
+
+.body-text_3 {
+  @include font(0.75rem, 400, 133%);
+  font-family: 'Manrope', sans-serif;
+}
+
+.other-text {
+  @include font(0.6875rem, 600, 136%);
+}
+
+.button__text {
+  @include font(1rem, 600, 137%);
+}
+
+.button-small__text {
+  @include font(0.875rem, 600, 136%);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity $transition-hover ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+.page-enter-from {
+  opacity: 0;
+}
+.ql-editor {
+  padding: 12px 15px 40px !important;
+}
