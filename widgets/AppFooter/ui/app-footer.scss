@@ -14,7 +14,7 @@
     margin: 0 auto;
     min-height: 4.625rem;
     position: relative;
-    @include padding-horizontal(1.5rem);
+    // @include padding-horizontal(1.5rem);
   }
 
   &__content {
@@ -83,4 +83,14 @@
 
 .f-phone {
   color: #6e6e6e;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 0rem 1.5rem;
+    border-radius: 1rem;
+    &__content-title {
+      font-size: 1.075rem;
+    }
+  }
 }

@@ -9,7 +9,7 @@ const isModalOpen = ref(false);
 <template>
   <section class="main-banner">
     <NuxtImg
-      src="./baner/bn_1.jpg"
+      src="./baner/bn_3.jpg"
       alt="Монтаж систем отопления, водоснабжения, канализации"
       format="webp"
       class="main-banner__bg"
