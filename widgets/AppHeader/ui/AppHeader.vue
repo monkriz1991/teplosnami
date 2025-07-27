@@ -45,7 +45,7 @@ const updateSectionOffsets = () => {
 };
 
 const onScroll = () => {
-  const scrollY = window.scrollY + 100; // отступ сверху
+  const scrollY = window.scrollY + 100;
 
   for (const section of sectionOffsets) {
     if (scrollY >= section.top && scrollY < section.bottom) {
@@ -94,13 +94,11 @@ onUnmounted(() => {
       @click="isMenuOpened = false"
     />
   </Transition>
-
   <!-- Хедер -->
   <header class="header">
     <div class="header__container">
       <div class="header__content">
         <HeaderLogo />
-
         <!-- Бургер -->
         <div
           class="header__burger burger-header"
@@ -111,7 +109,6 @@ onUnmounted(() => {
           <div class="burger-header__stripe burger-header__stripe_2" />
           <div class="burger-header__stripe burger-header__stripe_3" />
         </div>
-
         <!-- Меню -->
         <div class="header__body" :class="{ active: isMenuOpened }">
           <!-- Навигация -->

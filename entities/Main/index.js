@@ -5,6 +5,7 @@ import WorkSteps from "./ui/WorkSteps/WorkSteps.vue";
 import Gallery from "./ui/Gallery/Gallery.vue";
 import Review from "./ui/Review/Review.vue";
 import MainRegion from "./ui/MainRegion/MainRegion.vue";
+import Statistics from "./ui/Statistics/Statistics.vue";
 
 export {
   MainBanner,
@@ -14,4 +15,5 @@ export {
   Gallery,
   Review,
   MainRegion,
+  Statistics,
 };

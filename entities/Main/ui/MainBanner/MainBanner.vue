@@ -8,6 +8,15 @@ const isModalOpen = ref(false);
 
 <template>
   <section class="main-banner">
+    <NuxtImg
+      src="./baner/bn_1.jpg"
+      alt="Монтаж систем отопления, водоснабжения, канализации"
+      format="webp"
+      class="main-banner__bg"
+    />
+
+    <div class="main-banner__overlay" />
+
     <div class="main-banner__content">
       <h1 class="main-banner__title">
         Монтаж систем отопления, водоснабжения, канализации.
@@ -22,14 +31,7 @@ const isModalOpen = ref(false);
         Оставить заявку
       </button>
     </div>
-    <div class="main-banner__img">
-      <NuxtImg
-        src="./baner_5.png"
-        alt="Монтаж систем отопления, водоснабжения, канализации"
-        sizes="500px"
-        format="webp"
-      />
-    </div>
+
     <BaseModal v-model="isModalOpen" />
   </section>
 </template>

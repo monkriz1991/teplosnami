@@ -8,6 +8,7 @@ import {
   Gallery,
   Review,
   MainRegion,
+  Statistics,
 } from "@/entities/Main";
 </script>
 
@@ -20,6 +21,7 @@ import {
       <MainInfo />
       <Gallery />
       <MainRegion />
+      <Statistics />
       <Review />
     </div>
   </section>

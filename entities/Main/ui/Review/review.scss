@@ -2,7 +2,7 @@
 
 .reviews {
   padding: 3rem 0;
-
+  margin: 5rem 0 2rem;
   &__headline {
     font-size: 1.8rem;
     font-weight: 900;
@@ -88,6 +88,7 @@
 @media (max-width: 768px) {
   .reviews {
     padding: 0rem 0;
+    margin: 2rem 0 0rem;
     .swiper {
       padding-bottom: 0.55rem !important;
     }

@@ -2,11 +2,11 @@
 
 .region-block {
   padding: 3rem 0;
-  background-color: #f8f8f8;
+  // background-color: #f8f8f8;
   // text-align: center;
 
   &__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 900;
     margin-bottom: 1rem;
   }
@@ -91,6 +91,9 @@
     }
     &__actions {
       align-items: inherit;
+    }
+    &__desc {
+      margin-bottom: 1rem;
     }
     &__phone span {
       margin: 0.5rem 0 0 0;
