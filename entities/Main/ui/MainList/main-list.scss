@@ -80,7 +80,7 @@
       inset: 0;
       background: linear-gradient(
         to left,
-        rgb(255 255 255 / 68%) -50%,
+        rgb(255 255 255 / 7%) -50%,
         rgb(255 255 255) 100%
       );
       z-index: 2;
@@ -93,8 +93,9 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     color: #000000;
+    height: 100%;
   }
 
   &__title {

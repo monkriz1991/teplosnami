@@ -4,9 +4,9 @@ import { useIntersectionObserver } from "@vueuse/core";
 import "./statistics.scss";
 
 const steps = [
-  { title: "Реализованных проектов", number: 57 },
-  { title: "Лет на рынке", number: 12 },
-  { title: "Года гарантии", number: 3 },
+  { title: "Реализованных проектов", number: 187 },
+  { title: "Лет на рынке", number: 19 },
+  { title: "Года гарантии", number: 5 },
 ];
 
 const animatedValues = reactive(steps.map(() => 0));

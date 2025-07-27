@@ -25,7 +25,6 @@ const isModalOpen = ref(false);
         Комплекс услуг по устройству коммуникаций в частном доме с гарантией.
         <br />
         Доступные цены! <br />
-        Действует рассрочка платежа!
       </h2>
       <button class="main-banner__btn button" @click="isModalOpen = true">
         Оставить заявку

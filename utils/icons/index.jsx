@@ -45,77 +45,6 @@ export const ArrowLeft = defineComponent({
   },
 });
 
-export const StarFavoriteNoActive = defineComponent({
-  name: "StarFavorite",
-  setup() {
-    return () => (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="pagination-panel__arrow-icon"
-      >
-        <path
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-width="1.5"
-          d="M6.04 7.772c-2.46.557-3.69.835-3.983 1.776c-.292.94.546 1.921 2.223 3.882l.434.507c.476.557.715.836.822 1.18c.107.345.071.717-.001 1.46l-.066.677c-.253 2.617-.38 3.925.386 4.506s1.918.051 4.22-1.009l.597-.274c.654-.302.981-.452 1.328-.452s.674.15 1.329.452l.595.274c2.303 1.06 3.455 1.59 4.22 1.01c.767-.582.64-1.89.387-4.507m1.189-3.824c1.677-1.96 2.515-2.941 2.223-3.882s-1.523-1.22-3.983-1.776l-.636-.144c-.699-.158-1.048-.237-1.329-.45s-.46-.536-.82-1.182l-.328-.588C13.58 3.136 12.947 2 12 2s-1.58 1.136-2.847 3.408"
-        />
-      </svg>
-    );
-  },
-});
-
-export const StarFavoriteActive = defineComponent({
-  name: "StarFavorite",
-  setup() {
-    return () => (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="pagination-panel__arrow-icon"
-      >
-        <path
-          fill="currentColor"
-          d="M9.153 5.408C10.42 3.136 11.053 2 12 2s1.58 1.136 2.847 3.408l.328.588c.36.646.54.969.82 1.182s.63.292 1.33.45l.636.144c2.46.557 3.689.835 3.982 1.776c.292.94-.546 1.921-2.223 3.882l-.434.507c-.476.557-.715.836-.822 1.18c-.107.345-.071.717.001 1.46l.066.677c.253 2.617.38 3.925-.386 4.506s-1.918.051-4.22-1.009l-.597-.274c-.654-.302-.981-.452-1.328-.452s-.674.15-1.328.452l-.596.274c-2.303 1.06-3.455 1.59-4.22 1.01c-.767-.582-.64-1.89-.387-4.507l.066-.676c.072-.744.108-1.116 0-1.46c-.106-.345-.345-.624-.821-1.18l-.434-.508c-1.677-1.96-2.515-2.941-2.223-3.882S3.58 8.328 6.04 7.772l.636-.144c.699-.158 1.048-.237 1.329-.45s.46-.536.82-1.182z"
-        />
-      </svg>
-    );
-  },
-});
-
-export const FavoriteLink = defineComponent({
-  name: "FavoriteLink",
-  setup() {
-    return () => (
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="pagination-panel__arrow-icon"
-      >
-        <g
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-width="1.5"
-        >
-          <path d="M22 12c0 4.714 0 7.071-1.465 8.535C19.178 21.894 17.055 21.993 13 22M2 11c.008-4.055.107-6.178 1.464-7.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536" />
-          <path stroke-linejoin="round" d="m3 21l8-8m0 0H5m6 0v6" />
-        </g>
-      </svg>
-    );
-  },
-});
-
 export const ArrowRight = defineComponent({
   name: "ArrowRight",
   setup() {
@@ -842,173 +771,6 @@ export const MenuDots = defineComponent({
   },
 });
 
-export const HeaderChevron = defineComponent({
-  name: "HeaderChevron",
-  setup() {
-    return () => (
-      <svg
-        width="21"
-        height="20"
-        viewBox="0 0 21 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="header__chevron"
-      >
-        <path
-          d="M5.86816 7.5L10.8682 12.5L15.8682 7.5"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    );
-  },
-});
-
-export const HeaderUser = defineComponent({
-  name: "HeaderUser",
-  setup() {
-    return () => (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-      >
-        <g fill="none" stroke="currentColor" stroke-width="1.5">
-          <circle cx="12" cy="9" r="3" />
-          <path
-            stroke-linecap="round"
-            d="M17.97 20c-.16-2.892-1.045-5-5.97-5s-5.81 2.108-5.97 5"
-          />
-          <path
-            stroke-linecap="round"
-            d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"
-          />
-        </g>
-      </svg>
-    );
-  },
-});
-
-export const HeaderBell = defineComponent({
-  name: "HeaderBell",
-  setup() {
-    return () => (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-      >
-        <path
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-width="1.5"
-          d="M12 6v4m-4.5 9c.655 1.748 2.422 3 4.5 3q.367 0 .72-.05M16.5 19a4.5 4.5 0 0 1-1.302 1.84M9.107 2.674A6.5 6.5 0 0 1 12 2c3.727 0 6.75 3.136 6.75 7.005v.705a4.4 4.4 0 0 0 .692 2.375l1.108 1.724c1.011 1.575.239 3.716-1.52 4.214a25.8 25.8 0 0 1-14.06 0c-1.759-.498-2.531-2.639-1.52-4.213l1.108-1.725A4.4 4.4 0 0 0 5.25 9.71v-.705c0-1.074.233-2.092.65-3.002"
-        />
-      </svg>
-    );
-  },
-});
-
-export const HeaderClock = defineComponent({
-  name: "HeaderClock",
-  setup() {
-    return () => (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-      >
-        <g
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-width="1.5"
-        >
-          <path stroke-linejoin="round" d="M12 8v4l2.5 2.5" />
-          <path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5" />
-        </g>
-      </svg>
-    );
-  },
-});
-
-export const HeaderPlus = defineComponent({
-  name: "HeaderPlus",
-  setup() {
-    return () => (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-      >
-        <path
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-width="1.5"
-          d="M15 12h-3m0 0H9m3 0V9m0 3v3M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"
-        />
-      </svg>
-    );
-  },
-});
-
-export const ArrowRightBreadcrumbs = defineComponent({
-  name: "ArrowRightBreadcrumbs",
-  setup() {
-    return () => (
-      <svg
-        width="18"
-        height="19"
-        viewBox="0 0 18 19"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M6.75 14L11.25 9.5L6.75 5"
-          stroke="var(--color-border-icons)"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    );
-  },
-});
-
-export const HeaderAdd = defineComponent({
-  name: "HeaderAdd",
-  setup() {
-    return () => (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-      >
-        <path
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-width="1.5"
-          d="M15 12h-3m0 0H9m3 0V9m0 3v3m10-3c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2s7.071 0 8.535 1.464c.974.974 1.3 2.343 1.41 4.536"
-        />
-      </svg>
-    );
-  },
-});
 export const Close = defineComponent({
   name: "Close",
   setup() {
@@ -1502,6 +1264,120 @@ export const Right = defineComponent({
         >
           <path stroke-linejoin="round" d="m10.5 9l3 3l-3 3" />
           <path d="M7 3.338A9.95 9.95 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5" />
+        </g>
+      </svg>
+    );
+  },
+});
+
+export const Hands = defineComponent({
+  name: "Hands",
+  setup() {
+    return () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 20 20"
+      >
+        <g fill="currentColor">
+          <path
+            fill-rule="evenodd"
+            d="M3.646 2.49a1 1 0 0 0-1.322.502L.161 7.795a1 1 0 0 0 .5 1.322l1.49.671a1 1 0 0 0 1.323-.5l2.163-4.804a1 1 0 0 0-.5-1.322zM1.873 8.418a.681.681 0 1 0 .56-1.242a.681.681 0 0 0-.56 1.242m17.142.83a1 1 0 0 0 .58-1.29L17.73 3.034a1 1 0 0 0-1.29-.581l-1.527.579a1 1 0 0 0-.58 1.29l1.866 4.925a1 1 0 0 0 1.289.581zm-2.937-5.445a.681.681 0 1 0 .483 1.274a.681.681 0 0 0-.483-1.274"
+            clip-rule="evenodd"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M14.885 4.107h.008a.5.5 0 1 0-.087-.997h-.008l-.026.003l-.097.01l-.353.034c-.297.03-.708.077-1.162.137c-.895.118-2.004.298-2.73.54c-.352.117-.724.344-1.08.604c-.361.264-.735.585-1.093.918A28 28 0 0 0 6.438 7.24c-.419.474-.516 1.23-.024 1.766c.32.346.82.784 1.468.98c.677.203 1.457.124 2.254-.468l.999-.645l.018-.011c.143.087.342.237.58.436c.26.218.542.475.805.722a34 34 0 0 1 .88.86l.055.057l.014.014l.005.005l.059.06l.075.039c.403.2.846.128 1.19.012c.358-.12.714-.324 1.017-.525a9 9 0 0 0 1.075-.849l.018-.016l.005-.005l.001-.001s-.088-.31-.432-.672l-.271.34L16 10l-2.508.957L14 10.5l-.268-.717a34 34 0 0 0-.508-.49c-.27-.254-.568-.525-.85-.76c-.273-.23-.557-.448-.794-.578c-.394-.216-.78-.056-.988.079l-1.028.664l-.014.01c-.555.416-1.011.432-1.38.321c-.4-.12-.755-.412-1.02-.7c-.083-.09-.107-.263.037-.426a27 27 0 0 1 1.751-1.815c.341-.317.683-.61 1.002-.843c.326-.238.6-.393.807-.462c.624-.208 1.645-.379 2.544-.498a41 41 0 0 1 1.478-.167l.093-.009z"
+            clip-rule="evenodd"
+          />
+          <path d="M14.127 10.177a35 35 0 0 0-.395-.394L14 10.5l-.508.457L16 10l.229-.66L16.5 9l-.255-.054l-.003.002l-.014.013l-.054.05a8 8 0 0 1-.895.699c-.27.18-.543.33-.783.41c-.186.063-.302.068-.369.057" />
+          <path
+            fill-rule="evenodd"
+            d="m5.047 5.068l-.197-.46l-.197-.46l.04-.016l.113-.048a93 93 0 0 1 1.67-.69a38 38 0 0 1 1.372-.523c.203-.072.392-.134.55-.179c.136-.04.31-.084.452-.084c.13 0 .267.03.38.06c.122.033.256.077.392.127c.274.1.583.23.869.356a29 29 0 0 1 .992.466l.066.032l.018.009l.006.003a.5.5 0 0 1-.447.895l-.005-.003l-.016-.008l-.062-.03a29 29 0 0 0-.959-.45a13 13 0 0 0-.803-.33a4 4 0 0 0-.309-.1a1 1 0 0 0-.119-.026l-.009.002c-.02.003-.073.014-.172.042a9 9 0 0 0-.492.161c-.388.137-.865.322-1.332.509a87 87 0 0 0-1.651.681l-.111.047zm-.657-.263a.5.5 0 0 1 .263-.656l.197.46l.197.459a.5.5 0 0 1-.657-.263m-1.903 3.96a.5.5 0 0 1 .707-.02l-.344.363l-.343.364a.5.5 0 0 1-.02-.707m4.57 3.387l2.763 1.036a1.5 1.5 0 0 0 1.587-.344l2.09-2.09a.5.5 0 0 1 .707.708l-2.09 2.09a2.5 2.5 0 0 1-2.645.572l-2.82-1.057l-.023-.011a3 3 0 0 1-.434-.292c-.162-.125-.352-.28-.557-.455a57 57 0 0 1-1.358-1.199a128 128 0 0 1-1.623-1.5l-.109-.102l-.038-.036l.343-.364l.344-.363l.037.035l.107.101a132 132 0 0 0 1.61 1.488c.46.417.935.84 1.333 1.178c.2.169.377.313.52.424c.132.101.215.157.256.18M3.67 14.288a.5.5 0 0 1 .703-.063l.959.8a1.5 1.5 0 0 0 .753.334l1.236.174a.5.5 0 1 1-.138.99l-1.237-.173a2.5 2.5 0 0 1-1.255-.557l-.959-.8a.5.5 0 0 1-.063-.705"
+            clip-rule="evenodd"
+          />
+        </g>
+      </svg>
+    );
+  },
+});
+
+export const Calculator = defineComponent({
+  name: "Calculator",
+  setup() {
+    return () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <g fill="none">
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-width="1.5"
+            d="M21 12c0 4.714 0 7.071-1.318 8.535S16.242 22 12 22s-6.364 0-7.682-1.465C3 19.072 3 16.714 3 12s0-7.071 1.318-8.536S7.758 2 12 2s6.364 0 7.682 1.464c.876.974 1.17 2.343 1.268 4.536"
+          />
+          <path
+            stroke="currentColor"
+            stroke-width="1.5"
+            d="M7 8c0-.465 0-.697.051-.888a1.5 1.5 0 0 1 1.06-1.06C8.304 6 8.536 6 9 6h6c.465 0 .697 0 .888.051a1.5 1.5 0 0 1 1.06 1.06C17 7.304 17 7.536 17 8s0 .697-.051.888a1.5 1.5 0 0 1-1.06 1.06C15.697 10 15.464 10 15 10H9c-.465 0-.697 0-.888-.051a1.5 1.5 0 0 1-1.06-1.06C7 8.696 7 8.464 7 8Z"
+          />
+          <circle cx="8" cy="13" r="1" fill="currentColor" />
+          <circle cx="8" cy="17" r="1" fill="currentColor" />
+          <circle cx="12" cy="13" r="1" fill="currentColor" />
+          <circle cx="12" cy="17" r="1" fill="currentColor" />
+          <circle cx="16" cy="13" r="1" fill="currentColor" />
+          <circle cx="16" cy="17" r="1" fill="currentColor" />
+        </g>
+      </svg>
+    );
+  },
+});
+
+export const Car = defineComponent({
+  name: "Car",
+  setup() {
+    return () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <g fill="none">
+          <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+          <path
+            fill="currentColor"
+            d="M15.84 4a3 3 0 0 1 2.499 1.34l.105.172L20.438 9H21.6a.4.4 0 0 1 .392.32L22 9.4v.475a.8.8 0 0 1-.502.743l-.128.04a5 5 0 0 1 .484 2.502l-.027.287l-.725 5.801a2 2 0 0 1-1.827 1.746l-.158.006H18a2 2 0 0 1-1.995-1.85L16 19H8a2 2 0 0 1-1.85 1.995L6 21H4.883a2 2 0 0 1-1.96-1.596l-.025-.156l-.725-5.8a5 5 0 0 1 .34-2.528l.117-.263l-.024-.005a.8.8 0 0 1-.599-.668L2 9.875V9.4a.4.4 0 0 1 .32-.392L2.4 9h1.163l1.993-3.488A3 3 0 0 1 7.96 4.007L8.16 4zm3.92 8.036a2.95 2.95 0 0 1-2 .957l-.206.007H6.446a2.96 2.96 0 0 1-2.205-.964a3 3 0 0 0-.103.928l.02.235L4.883 19H6v-1a1 1 0 0 1 .883-.993L7 17h10a1 1 0 0 1 .993.883L18 18v1h1.117l.725-5.801c.05-.392.02-.787-.083-1.163ZM5.737 13.898L8.48 15.38c.373.202.218.769-.206.752l-2.314-.093A1 1 0 0 1 5 15.04v-.7a.5.5 0 0 1 .738-.44Zm13.262.44v.701a1 1 0 0 1-.96 1l-2.314.092c-.424.017-.58-.55-.206-.752l2.742-1.48a.5.5 0 0 1 .738.44ZM15.84 6H8.16a1 1 0 0 0-.868.504l-1.714 3A1 1 0 0 0 6.446 11h11.108a1 1 0 0 0 .868-1.496l-1.714-3A1 1 0 0 0 15.839 6Z"
+          />
+        </g>
+      </svg>
+    );
+  },
+});
+
+export const Tools = defineComponent({
+  name: "Tools",
+  setup() {
+    return () => (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="1.5"
+        >
+          <path d="m10.05 10.607l-7.07 7.07a2 2 0 0 0 0 2.83v0a2 2 0 0 0 2.828 0l7.07-7.072m4.315.365l3.878 3.878a2 2 0 0 1 0 2.828v0a2 2 0 0 1-2.828 0l-6.209-6.208M6.733 5.904L4.61 6.61L2.49 3.075l1.414-1.414L7.44 3.782zm0 0l2.83 2.83" />
+          <path d="M10.05 10.607c-.844-2.153-.679-4.978 1.061-6.718s4.95-2.121 6.717-1.06l-3.04 3.04l-.283 3.111l3.111-.282l3.04-3.041c1.062 1.768.68 4.978-1.06 6.717c-1.74 1.74-4.564 1.905-6.717 1.061" />
         </g>
       </svg>
     );

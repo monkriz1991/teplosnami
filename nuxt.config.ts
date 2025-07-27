@@ -15,16 +15,17 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
     head: {
       htmlAttrs: {
-        lang: "en",
+        lang: "ru",
       },
-      title: "Site",
+      title: "Teplosnami",
+      titleTemplate: "%s",
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       meta: [
         {
           hid: "viewport",
           name: "viewport",
-          content: "width=device-width, initial-scale=1, maximum-scale=1",
+          content: "width=device-width, initial-scale=1, maximum-scale=5",
         },
         {
           hid: "format-detection",
@@ -32,13 +33,13 @@ export default defineNuxtConfig({
           content: "telephone=no",
         },
       ],
-      // link: [
-      //   {
-      //     rel: 'icon',
-      //     sizes: '16x16',
-      //     href: '/favicon6.ico'
-      //   }
-      // ]
+      link: [
+        {
+          rel: "icon",
+          sizes: "16x16",
+          href: "/favicon.ico",
+        },
+      ],
     },
   },
 
@@ -55,17 +56,10 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@vueuse/nuxt",
     [
-      "@vee-validate/nuxt",
+      "yandex-metrika-module-nuxt3",
       {
-        // disable or enable auto imports
-        autoImports: true,
-        // Use different names for components
-        componentNames: {
-          Form: "VeeForm",
-          Field: "VeeField",
-          FieldArray: "VeeFieldArray",
-          ErrorMessage: "VeeErrorMessage",
-        },
+        id: "103502811",
+        webvisor: true,
       },
     ],
   ],

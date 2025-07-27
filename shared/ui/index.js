@@ -6,6 +6,7 @@ import PageHeader from "./PageHeader/PageHeader.vue";
 import BaseArticle from "./BaseArticle/BaseArticle.vue";
 import BaseSwitcher from "./BaseSwitcher/BaseSwitcher.vue";
 import BaseDropdown from "./BaseDropdown/BaseDropdown.vue";
+import ReviewModal from "./ReviewModal/ReviewModal.vue";
 
 // Экспорт всех компонентов в одном объекте
 export {
@@ -17,4 +18,5 @@ export {
   BaseArticle,
   BaseSwitcher,
   BaseDropdown,
+  ReviewModal,
 };

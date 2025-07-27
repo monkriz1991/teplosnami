@@ -1,9 +1,10 @@
 <script setup>
 import "./base-modal.scss";
 import { Close } from "~/utils/icons/index.jsx";
+import { setScrollHidden } from "@/shared/lib/helpers/scroll-helpers";
 import { BaseTextField } from "@/shared/ui";
 
-defineProps({
+const props = defineProps({
   modelValue: { type: Boolean, required: true },
 });
 const emit = defineEmits(["update:modelValue"]);
@@ -66,7 +67,12 @@ const submitForm = async () => {
     loading.value = false;
   }
 };
-
+watch(
+  () => props.modelValue,
+  (val) => {
+    setScrollHidden(val);
+  }
+);
 watch(
   () => form.value.contact,
   (newVal) => {
