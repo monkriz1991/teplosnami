@@ -6,7 +6,7 @@ import "./statistics.scss";
 const steps = [
   { title: "Реализованных проектов", number: 187 },
   { title: "Лет на рынке", number: 19 },
-  { title: "Года гарантии", number: 5 },
+  { title: "Лет гарантии", number: 5 },
 ];
 
 const animatedValues = reactive(steps.map(() => 0));
