@@ -30,7 +30,7 @@ const steps = [
 <template>
   <section class="work-stages" id="steps">
     <div class="container">
-      <h2 class="work-stages__headline">Этапы</h2>
+      <h2 class="work-stages__headline">Заказать монтаж</h2>
 
       <div class="work-stages__grid">
         <div

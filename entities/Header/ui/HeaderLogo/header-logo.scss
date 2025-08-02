@@ -42,5 +42,8 @@
     &-subtitle {
       @include font(0.475rem, 400, 130%);
     }
+    &-image {
+      height: 2rem;
+    }
   }
 }

@@ -7,10 +7,10 @@ const subTitleHeader = ref("");
 
 <template>
   <NuxtLink to="/" class="header__logo" aria-label="Логотип">
-    <!-- <img src="/u5.png" alt="Логотип" class="header__logo-image" /> -->
+    <img src="/logotip.png" alt="Логотип" class="header__logo-image" />
     <div class="header__logo-text">
-      <span class="header__logo-title">{{ titleHeader }}</span>
-      <span class="header__logo-subtitle">{{ subTitleHeader }}</span>
+      <!-- <span class="header__logo-title">{{ titleHeader }}</span>
+      <span class="header__logo-subtitle">{{ subTitleHeader }}</span> -->
     </div>
   </NuxtLink>
 </template>

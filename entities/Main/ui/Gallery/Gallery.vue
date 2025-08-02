@@ -20,6 +20,10 @@ const services = [
   { img: "/gallery/12.webp" },
   { img: "/gallery/13.webp" },
   { img: "/gallery/14.webp" },
+  { img: "/gallery/15.webp" },
+  { img: "/gallery/16.webp" },
+  { img: "/gallery/17.webp" },
+  { img: "/gallery/18.webp" },
 ];
 
 const isMobile = useMediaQuery("(max-width: 768px)");
