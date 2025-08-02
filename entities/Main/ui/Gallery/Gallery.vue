@@ -19,7 +19,7 @@ const services = [
   { img: "/gallery/11.webp" },
   { img: "/gallery/12.webp" },
   { img: "/gallery/13.webp" },
-  { img: "/gallery/14.webp" },
+  { img: "/gallery/141.webp" },
   { img: "/gallery/15.webp" },
   { img: "/gallery/16.webp" },
   { img: "/gallery/17.webp" },
